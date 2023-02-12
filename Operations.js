@@ -27,5 +27,10 @@ function Equals()
     let result = document.getElementById("Result");
     let operation = document.getElementById("Operation");
     operation.textContent = result.textContent;
-    result.textContent = eval(result.textContent);
+    result.textContent = eval(result.textContent);/*
+    if((result.textContent = eval(result.textContent).length) > 9)
+    {
+        result.textContent = result.textContent.slice(9);         TODO: LIMIT RESULT CHAR SIZE
+    }
+    */
 }
