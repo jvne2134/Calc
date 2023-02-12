@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <title>
+        Calculadora
+    </title>
+    <head>
+        <meta charset="UTF-8">
+        <script src="Operations.js"></script>
+        <style>
+            .Body
+            {
+                width:300px;
+                height:425px;
+                border:3px solid #292d3e; 
+                border-radius: 20px; 
+                background-color: #292d3e;
+            }
+            .Screen
+            {
+                width: auto;
+                height: 25%;
+                border:3px solid #535b7e; 
+                border-radius: 20px; 
+                background-color: #535b7e;
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-top: 5%;
+            }
+            .Buttons
+            {
+                margin-top: 5%;
+                width: auto;
+            }
+            .Button
+            {
+                height: 50px;
+                width: 50px;
+                margin-left: 10px;
+                margin-top: 16px;
+                font-size: x-large;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                background-color: #5b648a;
+                border: 1px;
+                border-color: #5b648a;
+                border-radius: 10%;
+                transition-duration: 0.1s;
+            }
+            .Button:hover
+            {
+                background-color: #8d9bd6; /* Green */
+                color: white;
+            }
+            .Button:active
+            {
+                transform: translateY(4px);
+            }
+            .Operation
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: large;
+                text-align: end;
+                margin-right: 3%;
+                margin-top: 3%;
+                color: #747fb0;
+            }
+            .Result
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 50px;
+                text-align: end;
+                margin-right: 3%;
+                margin-top: 5%;
+                color: #a8b8ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="Body" class="Body">
+            <div id="Screen" class="Screen">
+                <div>
+                    <div id="Operation" class="Operation">
+                        0
+                    </div>
+                    <div id="Result" class="Result">
+                        0
+                    </div>
+                </div>
+                <div id="Buttons" class="Buttons">
+                    <button onclick="Send(1)" class="Button"> 1 </button> <button onclick="Send(2)" class="Button"> 2 </button> <button onclick="Send(3)" class="Button"> 3 </button> <button onclick="Send('+')" class="Button"> + </button> <br>
+                    <button onclick="Send(4)" class="Button"> 4 </button> <button onclick="Send(5)" class="Button"> 5 </button> <button onclick="Send(6)" class="Button"> 6 </button> <button onclick="Send('-')" class="Button"> - </button> <br>
+                    <button onclick="Send(7)" class="Button"> 7 </button> <button onclick="Send(8)" class="Button"> 8 </button> <button onclick="Send(9)" class="Button"> 9 </button> <button onclick="Send('*')" class="Button"> x </button> <br>
+                    <button onclick="Send('.')" class="Button"> . </button> <button onclick="Clear()" class="Button"> AC </button> <button onclick="Equals()" class="Button"> = </button> <button onclick="Send('/')" class="Button"> / </button> <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
